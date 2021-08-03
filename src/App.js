@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Loader from "react-loader-spinner";
 import './App.css';
 import Coins from './Components/Coins';
 
@@ -36,23 +37,37 @@ function App() {
           <input type="text" className="coin-input" placeholder="Search" onChange={handleChange} />
         </form>
       </div>
-      {ApiCall ? (
-        <>
-          {filteredCoins.map((coin) => {
-            return (
-              <Coins
-                key={coin.id}
-                name={coin.name}
-                image={coin.image}
-                price={coin.current_price}
-                symbol={coin.symbol}
-                volume={coin.market_cap}
-                priceChange={coin.price_change_percentage_24h}
-                market_cap={coin.total_volume}
-              />
-            )
-          })}
-        </>) : (<h1>Loading...</h1>)}
+      {ApiCall ?
+        (
+          <>
+            {filteredCoins.map((coin) => {
+              return (
+                <Coins
+                  key={coin.id}
+                  name={coin.name}
+                  image={coin.image}
+                  price={coin.current_price}
+                  symbol={coin.symbol}
+                  volume={coin.market_cap}
+                  priceChange={coin.price_change_percentage_24h}
+                  market_cap={coin.total_volume}
+                />
+              )
+            })}
+          </>
+        ) :
+        (
+          <div className="loader">
+            <div className="loader-text">Loading</div>
+            <Loader
+              className="loader-dots"
+              type="ThreeDots"
+              color="#7918f2"
+              height={50}
+              width={50}
+            /></div>
+        )
+      }
     </div>
   );
 }

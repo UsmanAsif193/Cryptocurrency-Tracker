@@ -50,3 +50,18 @@
 .coin-input::placeholder {
   color: #e2e2e2;
 }
+
+.loader{
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+
+.loader-dots{
+  padding-top: 28px;
+}
+
+.loader-text{
+  font-size: 30px;
+  font-weight: 800;
+}
