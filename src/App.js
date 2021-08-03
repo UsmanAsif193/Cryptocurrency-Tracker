@@ -3,6 +3,7 @@ import axios from 'axios';
 import Loader from "react-loader-spinner";
 import './App.css';
 import Coins from './Components/Coins';
+import CoinsHeader from './Components/CoinsHeader';
 
 function App() {
 
@@ -40,6 +41,7 @@ function App() {
       {ApiCall ?
         (
           <>
+            <CoinsHeader />
             {filteredCoins.map((coin) => {
               return (
                 <Coins
@@ -50,7 +52,7 @@ function App() {
                   symbol={coin.symbol}
                   volume={coin.market_cap}
                   priceChange={coin.price_change_percentage_24h}
-                  market_cap={coin.total_volume}
+                  marketcap={coin.total_volume}
                 />
               )
             })}
