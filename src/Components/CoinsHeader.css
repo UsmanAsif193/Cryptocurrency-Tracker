@@ -1,6 +1,8 @@
 .coins-header{
     font-size:13px;
     display: flex;
+    justify-content: center;
+    margin-left: 5px;
 }
 
 .name{

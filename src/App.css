@@ -64,3 +64,11 @@
   font-size: 30px;
   font-weight: 800;
 }
+
+@media only screen and (max-width: 745px){
+  .coin-app{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+  }
+}
