@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
+import Coins from './Components/Coins';
 
 function App() {
 
@@ -15,8 +16,16 @@ function App() {
   }, [])
 
   return (
-    <div>
-      Hello World
+    <div className="coin-app">
+      <div className="coin-search">
+        <h1 className="coin-text">
+          Search a Currency
+        </h1>
+        <form>
+          <input type="text" className="coin-input" placeholder="Search" />
+        </form>
+      </div>
+      <Coins coins={coins} />
     </div>
   );
 }
