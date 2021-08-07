@@ -4,6 +4,7 @@ import Loader from "react-loader-spinner";
 import './App.css';
 import Coins from './Components/Coins';
 import CoinsHeader from './Components/CoinsHeader';
+import CoinsMaterial from './Components/CoinsMaterial';
 
 function App() {
 
@@ -41,21 +42,7 @@ function App() {
       {ApiCall ?
         (
           <>
-            <CoinsHeader />
-            {filteredCoins.map((coin) => {
-              return (
-                <Coins
-                  key={coin.id}
-                  name={coin.name}
-                  image={coin.image}
-                  price={coin.current_price}
-                  symbol={coin.symbol}
-                  volume={coin.market_cap}
-                  priceChange={coin.price_change_percentage_24h}
-                  marketcap={coin.total_volume}
-                />
-              )
-            })}
+            <CoinsMaterial Coins={filteredCoins} />
           </>
         ) :
         (

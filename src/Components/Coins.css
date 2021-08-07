@@ -68,3 +68,10 @@
 .green {
     color: #11d811;
 }
+
+
+@media only screen and (max-width: 720px){
+    .coin-row{
+        flex-direction: row;
+    }
+}
