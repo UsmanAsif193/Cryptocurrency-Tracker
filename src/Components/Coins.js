@@ -15,8 +15,12 @@ export default function Coins({ Coins, search }) {
     if (CoinsData.length === loadMore) {
       setbuttondisable(true)
     }
-    if (search != 0) {
+    if (search !== 0) {
       setbuttondisable(true)
+    }
+    if (search == 0) {
+      setbuttondisable(false)
+      console.log(buttondisable)
     }
   })
 
