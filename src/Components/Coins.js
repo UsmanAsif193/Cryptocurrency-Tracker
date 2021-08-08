@@ -20,7 +20,6 @@ export default function Coins({ Coins, search }) {
     }
     if (search == 0) {
       setbuttondisable(false)
-      console.log(buttondisable)
     }
   })
 
@@ -46,8 +45,7 @@ export default function Coins({ Coins, search }) {
         <Tbody>
           {CoinsData.slice(0, loadMore).map((coin) => (
             <>
-              <div className="coin-line"></div>
-              <Tr className="coin-table-row" key={coin.name} style={{ border: 'none' }}>
+              <Tr className="coin-table-row" key={coin.name} style={{ border: 'none', borderBottom: 'solid 3px #efefef' }}>
                 <Td className="coin-name-section">
                   <img
                     src={coin.image}
@@ -68,7 +66,6 @@ export default function Coins({ Coins, search }) {
                   )
                 }
                 <Td>{coin.total_volume.toLocaleString()}</Td>
-                <hr />
               </Tr>
             </>
           ))}

@@ -1,13 +1,19 @@
 .coin-table-row{
     border: none;
 }
-.coin-table-row hr{
-    display: none;
+
+.responsiveTable{
+    width: 85%;
+}
+
+Table Th, Table Td{
+    border-bottom: solid 3px #efefef;
 }
 
 Table{
     line-height: 60px;
     padding: 0 55px 0 100px;
+    border-collapse: collapse;
 }
 
 .red {
@@ -24,27 +30,33 @@ Table{
     right: 7px;
 }
 
-.coin-line{
+.table-hr{
     width: 330%;
     height: 1px;
     background-color: lightgrey;
 }
 
 @media only screen and (max-width: 980px){
-.coin-line{
+.table-hr{
     width: 340%;
 }
 }
 
 @media only screen and (max-width: 930px){
-    .coin-line{
+    .table-hr{
         width: 360%;
     }
 }
 
 @media only screen and (max-width: 900px){
-    .coin-line{
+    .table-hr{
         width: 400%;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .table-hr{
+        width: 600%;
     }
 }
 
@@ -59,6 +71,10 @@ Table{
         padding: 0;
     }
 
+    .coin-table-row Tr:last-child{
+        border-bottom: solid 3px #efefef;
+    }
+
     .coin-name-section img{
     height: 19px;
     width: 19px;
@@ -67,10 +83,7 @@ Table{
     right: 7px;
 }
 
-.coin-line{
-    display:none;
-}
-.coin-table-row hr{
+.table-hr{
     display: block;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
