@@ -1,0 +1,42 @@
+.gradient-div{
+    display: flex;
+    justify-content: center;
+}
+
+.gradient-button{
+  background-image: linear-gradient(
+    to right top, 
+    #6c2be5, 
+    #7728e2, 
+    #8024df, 
+    #8920dc, 
+    #911cd9, 
+    #714cec, 
+    #4a68f9, 
+    #007dff, 
+    #00a4ff, 
+    #00c5ff, 
+    #00e2ff, 
+    #5ffbf1);
+    border-radius: 50px;
+    width: 180px;
+    border: none;
+    padding: 10% 0%;
+    color: #efefef;
+    font-size: 16px;
+    margin-bottom: 25px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+
+.button-hidden{
+  display:none
+}
+
+@media only screen and (max-width:600px) {
+  .gradient-button{
+    width: 200px;
+    padding: 3% 0%;
+  }
+}
