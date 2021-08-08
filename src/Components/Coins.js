@@ -7,17 +7,20 @@ import GradientButton from './Gradient-Button';
 export default function Coins({ Coins }) {
 
   const [CoinsData, setCoinsData] = useState([])
-  const [loadMore, setloadMore] = useState(10)
+  const [loadMore, setloadMore] = useState(20)
   const [buttondisable, setbuttondisable] = useState(false)
 
   useEffect(() => {
     setCoinsData(Coins)
+    if (CoinsData.length === loadMore) {
+      setbuttondisable(true)
+    }
   })
 
   const loadMoreProjects = () => {
     setloadMore(loadMore => loadMore + 10)
-    setbuttondisable(true)
   }
+
 
   return (
     <>
