@@ -1,3 +1,59 @@
 .coin-table-row{
-    margin: 20px;
+    border: none;
+}
+.coin-table-row hr{
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+}
+
+Table{
+    line-height: 44px;
+    padding: 0 0 0 24px;
+}
+
+.coin-name-section img{
+    position: relative;
+    top: 8px;
+    right: 7px;
+}
+
+.coin-line{
+    width: 330%;
+    height: 1px;
+    background-color: lightgrey;
+}
+
+@media only screen and (max-width: 2000px){
+    .coin-table-row hr{
+        display: block;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        margin-left: auto;
+        margin-right: auto;
+        border-style: inset;
+        border-width: 1px;
+    }
+}
+@media only screen and (max-width: 640px){
+
+    .coin-table-row{
+        border: none;
+    }
+
+    .coin-name-section img{
+    height: 19px;
+    width: 19px;
+    position: relative;
+    top: 4px;
+    right: 7px;
+}
+
+.coin-line{
+    display:none;
+}
 }
