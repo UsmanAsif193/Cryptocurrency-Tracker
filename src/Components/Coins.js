@@ -18,7 +18,7 @@ export default function Coins({ Coins }) {
   })
 
   const loadMoreProjects = () => {
-    setloadMore(loadMore => loadMore + 10)
+    setloadMore(loadMore => loadMore + 50)
   }
 
 
