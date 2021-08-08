@@ -3,8 +3,6 @@ import axios from 'axios';
 import Loader from "react-loader-spinner";
 import './App.css';
 import Coins from './Components/Coins';
-import CoinsHeader from './Components/CoinsHeader';
-import CoinsMaterial from './Components/CoinsMaterial';
 
 function App() {
 
@@ -42,7 +40,7 @@ function App() {
       {ApiCall ?
         (
           <>
-            <CoinsMaterial Coins={filteredCoins} />
+            <Coins Coins={filteredCoins} />
           </>
         ) :
         (

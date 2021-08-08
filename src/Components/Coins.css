@@ -1,66 +1,15 @@
-.coin-container {
-    display: flex;
-    justify-content: center;
+.coin-table-row{
+    border: none;
 }
-  
-.coin-row {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    height: 80px;
-    border-bottom: 1px solid #d7d7d7;
-    width: 100%;
+.coin-table-row hr{
+    display: none;
 }
-  
-.coin {
-    display: flex;
-    align-items: center;
-    padding-right: 24px;  
-    min-width: 300px;
+
+Table{
+    line-height: 60px;
+    padding: 0 55px 0 100px;
 }
-  
-.coin h1 {
-    font-size: 16px;
-    width: 150px;
-}
-  
-.coin img {
-    height: 30px;
-    width: 30px;
-    margin-right: 10px;
-}
-  
-.coin-symbol {
-    text-transform: uppercase;
-    width: 100px;
-}
-  
-.coin-data {
-    display: flex;
-    text-align: right;
-    justify-content: space-between;
-    width: 100%;
-}
-  
-.coin-price {
-    width: 110px;
-}
-  
-.coin-volume {
-    width: 155px;
-}
-  
-.coin-marketcap {
-    width: 230px;
-    padding-right: 52px;
-}
-  
-.coin-percent {
-    width: 100px;
-    padding-right: 20px;
-}
-  
+
 .red {
     color: #f00606;
 }
@@ -69,9 +18,65 @@
     color: #11d811;
 }
 
+.coin-name-section img{
+    position: relative;
+    top: 8px;
+    right: 7px;
+}
 
-@media only screen and (max-width: 720px){
-    .coin-row{
-        flex-direction: row;
+.coin-line{
+    width: 330%;
+    height: 1px;
+    background-color: lightgrey;
+}
+
+@media only screen and (max-width: 980px){
+.coin-line{
+    width: 340%;
+}
+}
+
+@media only screen and (max-width: 930px){
+    .coin-line{
+        width: 360%;
     }
+}
+
+@media only screen and (max-width: 900px){
+    .coin-line{
+        width: 400%;
+    }
+}
+
+@media only screen and (max-width: 640px){
+
+    .coin-table-row{
+        border: none;
+        padding: 0;
+    }
+
+    Table{
+        padding: 0;
+    }
+
+    .coin-name-section img{
+    height: 19px;
+    width: 19px;
+    position: relative;
+    top: 4px;
+    right: 7px;
+}
+
+.coin-line{
+    display:none;
+}
+.coin-table-row hr{
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+}
 }
