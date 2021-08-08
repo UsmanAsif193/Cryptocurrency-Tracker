@@ -4,7 +4,7 @@ import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
 import './Coins.css'
 import GradientButton from './Gradient-Button';
 
-export default function Coins({ Coins }) {
+export default function Coins({ Coins, search }) {
 
   const [CoinsData, setCoinsData] = useState([])
   const [loadMore, setloadMore] = useState(20)
@@ -15,11 +15,15 @@ export default function Coins({ Coins }) {
     if (CoinsData.length === loadMore) {
       setbuttondisable(true)
     }
+    if (search != 0) {
+      setbuttondisable(true)
+    }
   })
 
   const loadMoreProjects = () => {
     setloadMore(loadMore => loadMore + 50)
   }
+
 
 
   return (

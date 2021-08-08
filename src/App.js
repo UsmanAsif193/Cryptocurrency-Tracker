@@ -40,7 +40,7 @@ function App() {
       {ApiCall ?
         (
           <>
-            <Coins Coins={filteredCoins} />
+            <Coins Coins={filteredCoins} search={search} />
           </>
         ) :
         (
