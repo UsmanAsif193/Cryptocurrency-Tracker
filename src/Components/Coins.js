@@ -22,8 +22,6 @@ export default function Coins({ Coins, search }) {
       setbuttondisable(true)
     }
   }, [loadMore, search])
-
-  console.log(search)
   const loadMoreProjects = () => {
     setloadMore(loadMore => loadMore + 46)
   }
@@ -45,30 +43,28 @@ export default function Coins({ Coins, search }) {
         </Thead>
         <Tbody>
           {CoinsData.slice(0, loadMore).map((coin) => (
-            <>
-              <Tr className="coin-table-row" key={coin.name} style={{ border: 'none', borderBottom: 'solid 3px #efefef' }}>
-                <Td className="coin-name-section">
-                  <img
-                    src={coin.image}
-                    alt={coin.name}
-                    height="30px"
-                    width="30px"
-                  />
-                  {coin.name}
-                </Td>
-                <Td>{coin.symbol.toUpperCase()}</Td>
-                <Td>${coin.current_price}</Td>
-                <Td>${coin.market_cap.toLocaleString()}</Td>
-                {coin.market_cap_change_percentage_24h < 0 ?
-                  (<Td className="red">{coin.market_cap_change_percentage_24h.toFixed(2)}%</Td>)
-                  :
-                  (
-                    <Td className="green">{coin.market_cap_change_percentage_24h.toFixed(2)}%</Td>
-                  )
-                }
-                <Td>{coin.total_volume.toLocaleString()}</Td>
-              </Tr>
-            </>
+            <Tr className="coin-table-row" key={coin.name} style={{ border: 'none', borderBottom: 'solid 3px #efefef' }}>
+              <Td className="coin-name-section">
+                <img
+                  src={coin.image}
+                  alt={coin.name}
+                  height="30px"
+                  width="30px"
+                />
+                {coin.name}
+              </Td>
+              <Td>{coin.symbol.toUpperCase()}</Td>
+              <Td>${coin.current_price}</Td>
+              <Td>${coin.market_cap.toLocaleString()}</Td>
+              {coin.market_cap_change_percentage_24h < 0 ?
+                (<Td className="red">{coin.market_cap_change_percentage_24h.toFixed(2)}%</Td>)
+                :
+                (
+                  <Td className="green">{coin.market_cap_change_percentage_24h.toFixed(2)}%</Td>
+                )
+              }
+              <Td>{coin.total_volume.toLocaleString()}</Td>
+            </Tr>
           ))}
         </Tbody>
       </Table>
