@@ -12,19 +12,20 @@ export default function Coins({ Coins, search }) {
 
   useEffect(() => {
     setCoinsData(Coins)
-    if (CoinsData.length === loadMore) {
-      setbuttondisable(true)
-    }
     if (search !== 0) {
       setbuttondisable(true)
     }
     if (search == 0) {
       setbuttondisable(false)
     }
-  })
+    if (loadMore === 250) {
+      setbuttondisable(true)
+    }
+  }, [loadMore, search])
 
+  console.log(search)
   const loadMoreProjects = () => {
-    setloadMore(loadMore => loadMore + 50)
+    setloadMore(loadMore => loadMore + 46)
   }
 
 
