@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: black;
 }
 
@@ -22,6 +22,13 @@
   flex-direction: column;
   justify-content: center;
   align-content: center;
+}
+
+.convertor-search {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .coin-text {
@@ -50,17 +57,29 @@
   color: #e2e2e2;
 }
 
-.loader{
+.loader {
   display: flex;
   align-items: center;
-  justify-content:center;
+  justify-content: center;
 }
 
-.loader-dots{
+.loader-dots {
   padding-top: 28px;
 }
 
-.loader-text{
+.loader-text {
   font-size: 30px;
   font-weight: 800;
+}
+
+@media (max-width: 768px) {
+  .convertor-search {
+    flex-direction: column-reverse;
+  }
+}
+
+.reverse-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
