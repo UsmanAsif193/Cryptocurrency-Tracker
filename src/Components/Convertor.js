@@ -76,6 +76,7 @@ const Convertor = ({ coins }) => {
               payload: { first: filter(coins, e.target.value) },
             })
           }
+          className="coin-input margin-5"
         >
           {coins
             .filter((x) => x.id !== state.second.id)
@@ -93,6 +94,8 @@ const Convertor = ({ coins }) => {
               payload: { firstInput: e.target.value },
             })
           }
+          placeholder="Write the Value"
+          className="coin-input margin-5"
           value={state.firstInput}
         />
       </div>
@@ -107,6 +110,7 @@ const Convertor = ({ coins }) => {
               payload: { second: filter(coins, e.target.value) },
             })
           }
+          className="coin-input margin-5"
         >
           {coins
             .filter((x) => x.id !== state.first.id)
@@ -125,6 +129,8 @@ const Convertor = ({ coins }) => {
               payload: { secondInput: e.target.value },
             })
           }
+          className="coin-input margin-5"
+          placeholder="Write the Value"
           disabled
         />
       </div>
