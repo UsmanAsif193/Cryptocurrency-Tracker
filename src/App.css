@@ -88,3 +88,8 @@
   margin-top: 10px;
   margin-right: 5px;
 }
+
+.coin-input:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+}

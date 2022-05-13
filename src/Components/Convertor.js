@@ -130,7 +130,7 @@ const Convertor = ({ coins }) => {
             })
           }
           className="coin-input margin-5"
-          placeholder="Write the Value"
+          placeholder="Get the Value"
           disabled
         />
       </div>
